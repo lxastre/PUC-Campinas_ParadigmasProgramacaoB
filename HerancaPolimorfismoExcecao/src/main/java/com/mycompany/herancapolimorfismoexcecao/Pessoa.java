@@ -14,6 +14,7 @@ public class Pessoa {
     public String nome_completo;
     public int idade;
     public float altura;
+    private double salario;
 
     public Pessoa() {
         System.out.println("Construtor VAZIO!!");
@@ -63,6 +64,16 @@ public class Pessoa {
         this.altura = altura;
     }
 
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Pessoa{" + "nome_completo=" + nome_completo + ", idade=" + idade + ", altura=" + altura + '}';
@@ -70,7 +81,7 @@ public class Pessoa {
     
     public float media_alturas(float altura_1, float altura_2, int qtd_de_alturas)
     {        
-/*        try
+        try
         {
             return (float)(altura_1 + altura_2)/qtd_de_alturas;
         }
@@ -79,14 +90,6 @@ public class Pessoa {
             System.out.println("Ocorreu um erro e estamos tratando ele.");
             System.out.println("O erro foi: "+e.getMessage());
             return 0;
-        }
-*/
-
-        try {
-            int[] myNumbers = {1, 2, 3};
-            System.out.println(myNumbers[10]);
-        } catch (Exception e) {
-            System.out.println("Something went wrong. "+ e.getMessage());
         }
     }
 
